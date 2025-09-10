@@ -93,7 +93,7 @@ class Sub:
             if isinstance(self.p2, Sub):
                 return "( " + repr(self.p1) + " ) - ( " + repr(self.p2) + " )"
             return "( " + repr(self.p1) + " ) - " + repr(self.p2)
-        if isinstance(self.p2, Add):
+        if isinstance(self.p2, Sub):
             return repr(self.p1) + " - ( " + repr(self.p2) + " )"
         return f"( {repr(self.p1)} - {repr(self.p2)} )"
 
